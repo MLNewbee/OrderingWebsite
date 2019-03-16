@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/sidebar-menu.css">
+<title>侧边栏</title>
+<style type="text/css">
+	body{
+		background-color: #222d32;
+	}
+	</style>
+</head>
+<body>
+<section style="width: 200px">
+	<ul class="sidebar-menu">
+	  	<li class="sidebar-header">菜单</li>
+	 	<li>
+	  		<a href="ShowOrderList" target="mainFrame">
+			<i class="fa fa-shopping-bag"></i><span>购物订单</span><i class="fa fa-angle-right pull-right"></i>
+			</a>
+	  	</li>
+		<li>
+			<a href="/structs2/jsp/myshop.jsp" target="mainFrame">
+			<i class="fa fa-home"></i><span>我的店铺</span><i class="fa fa-angle-right pull-right"></i>
+			</a>
+		</li>
+		<li>
+	  		<a href="#">
+			<i class="fa fa-file-text-o"></i><span>店铺订单</span><i class="fa fa-angle-down pull-right"></i>
+			</a>
+			<ul class="sidebar-submenu">
+				<li><a href="ShowUnsolvedOrders" target="mainFrame"><i class="fa fa-circle-o"></i>待接单</a></li>
+				<li><a href="ShowSolvedOrders" target="mainFrame"><i class="fa fa-circle-o"></i>已发单</a></li>
+				<li><a href="ShowReturnedOrders" target="mainFrame"><i class="fa fa-circle-o"></i>退货单</a></li>
+			</ul>
+	  	</li>
+		<li>
+	  		<a href="/structs2/html/browsinghistory.html" target="mainFrame">
+			<i class="fa fa-reorder"></i><span>浏览记录</span><i class="fa fa-angle-right pull-right"></i>
+			</a>
+	  	</li>
+		<li>
+	  		<a href="/structs2/html/attention.html" target="mainFrame">
+			<i class="fa fa-heart-o"></i><span>关注店铺</span><i class="fa fa-angle-right pull-right"></i>
+			</a>
+	  	</li>
+		<li>
+	  		<a href="/structs2/html/informationmanage.html" target="mainFrame">
+			<i class="fa fa-envelope-open-o"></i><span>信息管理</span><i class="fa fa-angle-right pull-right"></i>
+			</a>
+	  	</li>
+	</ul>
+</section>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="../js/sidebar-menu.js"></script>
+  <script>
+    $.sidebarMenu($('.sidebar-menu'))
+  </script>
+</body>
+</html>

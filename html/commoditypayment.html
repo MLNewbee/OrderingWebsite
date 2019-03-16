@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+	body {
+	background-color: #E3E3E3;
+}
+	#first{
+		width:1150px;
+		height:50px;
+		background-color: white;
+	}
+	#theme{
+		position: relative;
+		left:30px;
+		top:8px;
+	}
+	#cont0text{
+		position:absolute;
+		width:220px;
+		height:auto;
+		left: 160px;
+		top:35px;
+	}
+    #a{
+		margin-left:200px;
+		width:400px;
+		height:550px;
+		border:3px solid #000;
+	}
+	#img{
+		width:394px;
+		height:250px;
+		border:3px solid #333;
+	}
+	#button{
+		width:90px;
+		height:40px;
+		background-color:#CCC
+	}
+	a{
+		text-decoration: none;
+		color: #CC3399;
+		
+	}
+</style>
+<title>支付</title>
+</head>
+
+<body>
+<div id="first">
+	<h2 id="theme">商品支付</h2>
+	<div id="cont0text">
+	<a href="firstpage.html">首页></a>
+	<a href="productdetails.html">商品详情></a>
+	<a href="commoditypayment.html">商品支付</a>
+	</div>
+</div>
+	
+	<br/>
+	<div id="a">
+     <img id="img" src="../img/2.jpg" /><br/><br/>
+     
+      <form method="post" action="ConsumeAction" >
+     
+       购买数量: <input  type="text" name= "number"/><br/>
+       备注消息: <textarea style="width:388px; height:150px; margin-left:3px"></textarea>
+              <input type="submit" value="立即购买" style="margin-top:30px;margin-left:30px"></input>
+              <a style=" margin-left:160px" href="/structs2/html/productdetails.html">返回</a>
+     </form>
+     
+    </div>
+</body>
+</html>
