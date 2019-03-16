@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest" 
+		  name="myMultiPartRequest" class="com.eight.action.MyMultiParRequest" 
+		  scope="default" optional="true"/>
+	<constant name="struts.multipart.parser" value="myMultiPartRequest" />  
+	
+	<constant name="struts.devMode" value="flase"></constant>
+	<package name="default" extends="json-default">
+		<action name="addgoods" class="com.eight.action.GoodsManageAction" method="insect">
+			<result name="error">/jsp/myshop.jsp</result>
+			<result name="success">/jsp/myshop.jsp</result>
+		</action>
+		<action name="upload" class="com.eight.action.GoodsManageAction" method="upload">
+			<result name="error">/jsp/myshop.jsp</result>
+			<result name="success">/jsp/myshop.jsp</result>
+		</action>
+		<action name="updategoods" class="com.eight.action.GoodsManageAction" method="update">
+			<result name="success" >/jsp/myshop.jsp</result>
+		</action>
+		<action name="deletegoods" class="com.eight.action.GoodsManageAction" method="delete">
+			<result name="success" >/jsp/myshop.jsp</result>
+		</action>
+		<action name="goods_init" class="com.eight.action.GoodsManageAction" method="init">
+			<result name="error">/jsp/myshop.jsp</result>
+			<result name="success">/jsp/myshop.jsp</result>
+		</action>
+		<action name="register_check" class="com.eight.action.RegisterAction" method="register">
+			<result name="success" type="json">backinfo</result>
+		</action>
+		<action name="login_check" class="com.eight.action.RegisterAction" method="execute">
+			<result name="success" type="json">backinfo,isManager</result>
+		</action>
+		<action name="getGoodsId" class="com.eight.action.GoodsManageAction" method="getGoodsId">
+			<result name="success">/jsp/productdetails.jsp</result>
+		</action>
+		<action name="getSupplier" class="com.eight.action.GoodsManageAction" method="getSupplier">
+			<result name="success">/jsp/gotoshop.jsp</result>
+		</action>
+		<action name="CommentManageActionInsert" class="com.eight.action.CommentManageAction" method="insert">
+            <result name="success">/page/success.jsp</result>
+		</action>
+		<action name="CommentManageActionSelect" class="com.eight.action.CommentManageAction" method="select">
+             <result name="success">/jsp/comment.jsp</result>
+		</action>
+		<action name="CommentManageActionDelete" class="com.eight.action.CommentManageAction" method="delete">
+              <result name="success">/jsp/uncomment.jsp</result>
+		</action>
+		<action name="CommentManageActionUpdate" class="com.eight.action.CommentManageAction" method="update">
+	 	      <result name="success">/jsp/comment.jsp</result>
+		</action>
+		
+		
+		
+		<action name="setOrderIds" class="com.eight.action.OrderManageAction" method="setOrderIds">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="ReceiveOrder" class="com.eight.action.OrderManageAction" method="receiveOrder">
+	 	      <result name="success">/jsp/orderlist.jsp</result>
+		</action>
+		<action name="SendOrder" class="com.eight.action.OrderManageAction" method="sendOrder">
+	 	      <result name="success">/jsp/pendingorder.jsp</result>
+		</action>
+		
+		<action name="ShowOrderList" class="com.eight.action.OrderManageAction" method="getAllOrders">
+	 	      <result name="success">/jsp/orderlist.jsp</result>
+		</action>
+		<action name="ShowUnsolvedOrders" class="com.eight.action.OrderManageAction" method="getUnsolvedOrders">
+	 	      <result name="success">/jsp/pendingorder.jsp</result>
+		</action>
+		<action name="ShowSolvedOrders" class="com.eight.action.OrderManageAction" method="getSolvedOrders">
+	 	      <result name="success">/jsp/outoforder.jsp</result>
+		</action>
+		<action name="ShowReturnedOrders" class="com.eight.action.OrderManageAction" method="getReturnedOrders">
+	 	      <result name="success">/jsp/returnreport.jsp</result>
+		</action>
+		<action name="ConsumeAction" class="com.eight.action.OrderManageAction" method="comsume">
+	 	      <result name="success">/jsp/orderlist.jsp</result>
+		</action>
+		
+		
+		
+		
+		<action name="ManagementShowUsers" class="com.eight.action.BackManageAction" method="getAllUsers">
+	 	      <result name="success">/jsp/user.jsp</result>
+		</action>
+		<action name="ManagementShowGoods" class="com.eight.action.BackManageAction" method="getAllGoods">
+	 	      <result name="success">/jsp/shop.jsp</result>
+		</action>
+		<action name="ManagementShowOrders" class="com.eight.action.BackManageAction" method="getAllOrders">
+	 	      <result name="success">/jsp/orderdetail.jsp</result>
+		</action>
+		
+		<action name="ManagementDeleteGoods" class="com.eight.action.BackManageAction" method="deleteGoods">
+	 	      <result name="success">/jsp/shop.jsp</result>
+		</action>
+		
+		<action name="BanUser" class="com.eight.action.BackManageAction" method="banUser">
+	 	      <result name="success">/jsp/user.jsp</result>
+		</action>
+	</package>
+</struts>
