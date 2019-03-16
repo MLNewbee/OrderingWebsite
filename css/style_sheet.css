@@ -1,0 +1,74 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: #E3E3E3;
+}
+.div {
+	background-color: white;
+}
+
+#toph{
+	position: absolute;
+	margin: auto;
+	width: 98%;
+	left: 1%;
+	right: 1%;
+	top: 20px;
+	height: 60px;
+	background-color: white;
+}//页面头部
+
+#toptlbox{
+	position: absolute;
+	height: 100%;
+	display: table;
+	left: 15px;
+                border: 2px solid red;
+}//存放标题和页面链接
+#toptitle{
+	position: relative;
+	width: 120px;
+	display: table-cell;
+	vertical-align: middle;
+}//标题
+#toplist{
+	position: relative;
+	
+	display: table-cell;
+	vertical-align: middle;
+	width: 360px;
+}//页面链接列表
+
+#container0{
+	position: absolute;
+	margin: auto;
+	width: 96%;
+	left: 2%;
+	right: 2%;
+	top: 90px;
+	height: 40px;
+	background-color: white;
+}//框架种类一上
+
+#container1{
+	position: absolute;
+	margin: auto;
+	width: 98%;
+	left: 1%;
+	right: 1%;
+	top: 140px;
+	height: auto;
+	background-color: white;
+}//框架种类一下
+
+#containerl{
+	position:absolute;
+	margin: auto;
+	width: 98%;
+	left: 1%;
+	right: 1%;
+	top: 100px;
+	background-color: white;
+}//框架种类二
+
+
